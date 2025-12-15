@@ -314,28 +314,41 @@ elif analysis_focus == "Competitive Landscape":
                      annotation_text="Stoki Target ARPU")
         
         st.plotly_chart(fig, use_container_width=True)
-    
-    # Feature gap analysis
-    st.subheader("🔍 Feature Gap Analysis")
-    
-    # Melt features for heatmap
-    features_melted = features.melt(id_vars=['Feature'], var_name='Company', value_name='Available')
-    
-    fig = px.imshow(
-        features.pivot_table(index='Feature', columns=features.columns[1:], values='Feature').notna().astype(int),
-        title='Competitive Feature Matrix',
-        color_continuous_scale='RdYlGn',
-        aspect="auto"
+        
+    #Feature Gap Analysis
+st.subheader("🔍 Feature Gap Analysis")
+
+# Melt features for heatmap
+features_melted = features.melt(
+    id_vars=['Feature'],
+    var_name='Company',
+    value_name='Available'
+)
+
+# Build a pivot table: rows = Features, columns = Companies, values = availability (0/1)
+feature_matrix = features.set_index('Feature').notna().astype(int)
+
+# Plot as heatmap
+fig = px.imshow(
+    feature_matrix,
+    labels=dict(x="Company", y="Feature", color="Available"),
+    x=feature_matrix.columns,
+    y=feature_matrix.index,
+    color_continuous_scale='RdYlGn',
+    aspect="auto",
+    title="Competitive Feature Matrix"
+)
+
+# Highlight Stoki column if present
+if 'Stoki' in feature_matrix.columns:
+    fig.update_xaxes(
+        tickangle=45,
+        tickfont=dict(color="blue", size=12)
     )
-    
-    # Highlight Stoki
-    fig.update_layout(
-        height=500,
-        xaxis_title="Company",
-        yaxis_title="Feature"
-    )
-    
-    st.plotly_chart(fig, use_container_width=True)
+
+st.plotly_chart(fig, use_container_width=True)
+
+   
     
     # Feature coverage statistics
     st.subheader("📊 Feature Coverage Analysis")
