@@ -275,7 +275,7 @@ if analysis_focus == "Market Overview":
     st.plotly_chart(fig, use_container_width=True)
 
 elif analysis_focus == "Competitive Landscape":
-    st.header("⚔️ Competitive Intelligence")
+    st.header(" Competitive Intelligence")
     
     # Competitor comparison
     st.subheader(" Financial Comparison")
