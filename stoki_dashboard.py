@@ -67,7 +67,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Title
-st.markdown('<h1 class="main-header">🚀 Stoki Market Entry Strategy</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="main-header"> Stoki Market Entry Strategy</h1>', unsafe_allow_html=True)
 st.markdown('<p class="sub-header">Medium-Level Analysis for SA SMME FinTech Market Entry</p>', unsafe_allow_html=True)
 
 # Generate synthetic data
@@ -168,13 +168,13 @@ with st.sidebar:
     )
     
     st.markdown("---")
-    st.markdown("### 💡 Key Insights")
+    st.markdown("###  Key Insights")
     st.success("**Sweet Spot Identified:** Businesses with 11-50 employees")
     st.info("**Optimal Pricing:** R349/month")
     st.warning("**Key Differentiator:** Beautiful UX + Cashflow Automation")
     
     st.markdown("---")
-    st.markdown("### 🎯 Quick Stats")
+    st.markdown("###  Quick Stats")
     st.metric("Target SOM", "40,000 SMMEs")
     st.metric("Projected ARPU", "R349/month")
     st.metric("Target CAC", "R550")
@@ -182,7 +182,7 @@ with st.sidebar:
 
 # Main content based on selected focus
 if analysis_focus == "Market Overview":
-    st.header("🌍 Market Opportunity Analysis")
+    st.header(" Market Opportunity Analysis")
     
     # Market metrics
     col1, col2, col3, col4 = st.columns(4)
@@ -224,7 +224,7 @@ if analysis_focus == "Market Overview":
         st.markdown('</div>', unsafe_allow_html=True)
     
     # Market funnel visualization
-    st.subheader("📊 Market Funnel Analysis")
+    st.subheader(" Market Funnel Analysis")
     
     fig = go.Figure(go.Funnel(
         y = ["TAM (750,000)", "SAM (250,000)", "SOM (40,000)", "Current (16,000)"],
@@ -242,7 +242,7 @@ if analysis_focus == "Market Overview":
     st.plotly_chart(fig, use_container_width=True)
     
     # Pain points analysis
-    st.subheader("🎯 Target Customer Pain Points")
+    st.subheader(" Target Customer Pain Points")
     
     fig = px.bar(
         pain_points,
@@ -278,7 +278,7 @@ elif analysis_focus == "Competitive Landscape":
     st.header("⚔️ Competitive Intelligence")
     
     # Competitor comparison
-    st.subheader("📈 Financial Comparison")
+    st.subheader(" Financial Comparison")
     
     col1, col2 = st.columns(2)
     
@@ -316,7 +316,7 @@ elif analysis_focus == "Competitive Landscape":
         st.plotly_chart(fig, use_container_width=True)
     
     # Feature gap analysis
-    st.subheader("🔍 Feature Gap Analysis")
+    st.subheader(" Feature Gap Analysis")
     # Melt features for heatmap
     features_melted = features.melt(id_vars=['Feature'], var_name='Company', value_name='Available')
     # Build a pivot table: rows = Features, columns = Companies, values = availability (0/1)
@@ -331,7 +331,7 @@ elif analysis_focus == "Competitive Landscape":
     st.plotly_chart(fig, use_container_width=True)
     
     # Feature coverage statistics
-    st.subheader("📊 Feature Coverage Analysis")
+    st.subheader(" Feature Coverage Analysis")
     
     col1, col2, col3 = st.columns(3)
     
@@ -347,7 +347,7 @@ elif analysis_focus == "Competitive Landscape":
         st.metric("Stoki Advantage", f"{(stoki_coverage - avg_coverage):.0f}%", "+2.7 features")
 
 elif analysis_focus == "Target Segmentation":
-    st.header("🎯 Target Market Segmentation")
+    st.header(" Target Market Segmentation")
     
     # Segment comparison
     fig = make_subplots(
@@ -394,7 +394,7 @@ elif analysis_focus == "Target Segmentation":
     st.plotly_chart(fig, use_container_width=True)
     
     # Target segment rationale
-    st.subheader("🎯 Why Target Small Businesses (11-50 employees)?")
+    st.subheader(" Why Target Small Businesses (11-50 employees)?")
     
     target_segment = segments.iloc[1]
     
@@ -414,7 +414,7 @@ elif analysis_focus == "Target Segmentation":
     
     # Customer profile
     st.markdown('<div class="insight-box">', unsafe_allow_html=True)
-    st.markdown("### 👥 Ideal Customer Profile")
+    st.markdown("###  Ideal Customer Profile")
     st.markdown("""
     - **Size:** 11-50 employees
     - **Revenue:** R5M - R50M annually
@@ -426,10 +426,10 @@ elif analysis_focus == "Target Segmentation":
     st.markdown('</div>', unsafe_allow_html=True)
 
 elif analysis_focus == "Positioning Strategy":
-    st.header("🎯 Strategic Positioning")
+    st.header(" Strategic Positioning")
     
     # Competitive positioning map
-    st.subheader("🗺️ Competitive Positioning Map")
+    st.subheader(" Competitive Positioning Map")
     
     # Create positioning map
     fig = px.scatter(
@@ -469,13 +469,13 @@ elif analysis_focus == "Positioning Strategy":
     st.plotly_chart(fig, use_container_width=True)
     
     # Value proposition
-    st.subheader("💎 Stoki's Unique Value Proposition")
+    st.subheader(" Stoki's Unique Value Proposition")
     
     col1, col2, col3 = st.columns(3)
     
     with col1:
         st.markdown('<div class="strategy-card">', unsafe_allow_html=True)
-        st.markdown("### 🎨 Beautiful UX")
+        st.markdown("###  Beautiful UX")
         st.markdown("""
         - Intuitive interface
         - Mobile-first design
@@ -485,7 +485,7 @@ elif analysis_focus == "Positioning Strategy":
     
     with col2:
         st.markdown('<div class="strategy-card">', unsafe_allow_html=True)
-        st.markdown("### 📊 Cashflow Automation")
+        st.markdown("###  Cashflow Automation")
         st.markdown("""
         - AI-powered forecasting
         - Automated payment reminders
@@ -495,7 +495,7 @@ elif analysis_focus == "Positioning Strategy":
     
     with col3:
         st.markdown('<div class="strategy-card">', unsafe_allow_html=True)
-        st.markdown("### 🔄 All-in-One Solution")
+        st.markdown("###  All-in-One Solution")
         st.markdown("""
         - Invoicing + expenses
         - VAT ready
@@ -504,7 +504,7 @@ elif analysis_focus == "Positioning Strategy":
         st.markdown('</div>', unsafe_allow_html=True)
     
     # Pricing strategy
-    st.subheader("💰 Pricing Strategy")
+    st.subheader(" Pricing Strategy")
     
     pricing_data = pd.DataFrame({
         'Tier': ['Stoki Basic', 'Stoki Pro', 'Competitor Average', 'Market Leader'],
@@ -543,7 +543,7 @@ elif analysis_focus == "Positioning Strategy":
     st.plotly_chart(fig, use_container_width=True)
 
 elif analysis_focus == "Performance Tracker":
-    st.header("📊 Initial Performance Metrics")
+    st.header(" Initial Performance Metrics")
     
     # Results dashboard
     col1, col2, col3, col4 = st.columns(4)
@@ -581,7 +581,7 @@ elif analysis_focus == "Performance Tracker":
         )
     
     # Progress bars for key metrics
-    st.subheader("📈 Progress Towards Targets")
+    st.subheader(" Progress Towards Targets")
     
     for idx, row in results.iterrows():
         progress = (row['Current'] / row['Target']) * 100 if row['Target'] > 0 else 0
@@ -599,7 +599,7 @@ elif analysis_focus == "Performance Tracker":
             st.caption(f"Target: {row['Target']} {row['Unit']} ({progress:.0f}%)")
     
     # Signups growth chart
-    st.subheader("📈 Quarterly Growth Projection")
+    st.subheader(" Quarterly Growth Projection")
     
     growth_data = pd.DataFrame({
         'Quarter': ['Q1 2024', 'Q2 2024', 'Q3 2024', 'Q4 2024'],
@@ -634,10 +634,10 @@ elif analysis_focus == "Performance Tracker":
     st.plotly_chart(fig, use_container_width=True)
 
 else:  # Go-to-Market Plan
-    st.header("🚀 Go-to-Market Strategy")
+    st.header(" Go-to-Market Strategy")
     
     # Channel strategy
-    st.subheader("🎯 Acquisition Channel Strategy")
+    st.subheader(" Acquisition Channel Strategy")
     
     channels = pd.DataFrame({
         'Channel': ['Content Marketing', 'Accountant Partnerships', 'LinkedIn Ads', 
@@ -668,7 +668,7 @@ else:  # Go-to-Market Plan
     st.plotly_chart(fig, use_container_width=True)
     
     # Product roadmap
-    st.subheader("🛣️ Product Roadmap")
+    st.subheader(" Product Roadmap")
     
     roadmap = pd.DataFrame({
         'Phase': ['MVP Launch', 'Q2 2024', 'Q3 2024', 'Q4 2024'],
@@ -704,7 +704,7 @@ else:  # Go-to-Market Plan
             st.markdown("---")
     
     # Implementation timeline
-    st.subheader("📅 Implementation Timeline")
+    st.subheader(" Implementation Timeline")
     
     timeline_data = pd.DataFrame({
         'Task': ['Market Research', 'MVP Development', 'Beta Testing', 
@@ -743,7 +743,7 @@ else:  # Go-to-Market Plan
 st.markdown("---")
 st.markdown("""
 <div style='text-align: center; color: #6B7280; padding: 2rem;'>
-    <h3>🎯 Strategic Summary</h3>
+    <h3> Strategic Summary</h3>
     <p><strong>Target:</strong> Small businesses (11-50 employees) in major metros • 
     <strong>Price:</strong> R349/month • 
     <strong>Differentiator:</strong> Beautiful UX + Cashflow Automation</p>
