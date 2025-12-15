@@ -349,8 +349,8 @@ if 'Stoki' in feature_matrix.columns:
 st.plotly_chart(fig, use_container_width=True)
 
     
-    # Feature coverage statistics
-    st.subheader("📊 Feature Coverage Analysis")
+# Feature coverage statistics
+st.subheader("📊 Feature Coverage Analysis")
     
     col1, col2, col3 = st.columns(3)
     
