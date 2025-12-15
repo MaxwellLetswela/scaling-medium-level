@@ -328,7 +328,7 @@ elif analysis_focus == "Competitive Landscape":
     if 'Stoki' in feature_matrix.columns:fig.update_xaxes(tickangle=45, tickfont=dict(color="blue", size=12)
     )
 
-       st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, use_container_width=True)
     
     # Feature coverage statistics
     st.subheader("📊 Feature Coverage Analysis")
